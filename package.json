@@ -2,7 +2,9 @@
   "name": "ultimate-angular-playground",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start:playground":"nx run ultimate-angular-playground:serve"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.0.0",
