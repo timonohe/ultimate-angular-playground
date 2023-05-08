@@ -1,0 +1,35 @@
+{
+  "name": "ultimate-angular-playground-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ultimate-angular-playground-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ultimate-angular-playground-e2e/cypress.config.ts",
+        "devServerTarget": "ultimate-angular-playground:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ultimate-angular-playground:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "ultimate-angular-playground:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/ultimate-angular-playground-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ultimate-angular-playground"]
+}
