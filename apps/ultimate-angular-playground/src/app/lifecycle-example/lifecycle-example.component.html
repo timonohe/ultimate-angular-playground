@@ -1,5 +1,100 @@
-<h1>Component Lifecycles</h1>
+<h1>Angular Lifecycle</h1>
 
-<div *ngFor="let counterValue of lifecycleCounter | keyvalue">
-  {{counterValue.key}}: {{counterValue.value}}
+<div class="lifecycle-cards">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ngOnChanges</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Called if any input member changed</li>
+        <li>Holds current and previous member value</li>
+        <li>Called before ngOnInit if component has any input members</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ngOnInit</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Called first or after ngOnChanges</li>
+        <li>Method to initialize component members with complex code</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ngDoCheck</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Checks for custom change detections</li>
+        <li>Called after each ngOnChanges and after ngOnInit</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ngAfterContentInit</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Called after external content is loaded into that component</li>
+        <li>Called once after the first ngDoCheck</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ngAfterContentChecked</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Called after external content that was projected checked by angular</li>
+        <li>Called after ngAfterContentInit and after every ngDoCheck</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ngAfterViewInit</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Called after Angular initialized child views or displayed content</li>
+        <li>Called once after the first ngAfterContentChecked</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ngAfterViewChecked</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Called after Angular checked the embedded or to displayed content</li>
+        <li>Called after ngAfterViewInit or every ngAfterContentChecked</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ngOnDestroy</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Cleanup-Phase after Angular destoys the component</li>
+        <li>To avoid memory leaks unsubscribe here from every Observable</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
 </div>

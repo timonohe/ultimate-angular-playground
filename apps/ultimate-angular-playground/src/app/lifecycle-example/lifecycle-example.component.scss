@@ -1,0 +1,11 @@
+.lifecycle-cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+
+  mat-card {
+    grid-column: span 3;
+    color: #000;
+  }
+}
