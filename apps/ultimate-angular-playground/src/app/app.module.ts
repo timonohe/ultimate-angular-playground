@@ -8,11 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewEncapsulationComponent } from './view-encapsulation/view-encapsulation.component';
 
 const routes: Routes = [
   { path: 'angular-lifecycle', component: LifecycleExampleComponent },
+  { path: 'view-encapsulation', component: ViewEncapsulationComponent },
   { path: 'about', component: AboutMeComponent },
-  { path: '', redirectTo: 'angular-lifecycle', pathMatch: 'full'}
+  { path: '', redirectTo: 'angular-lifecycle', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -22,6 +24,7 @@ const routes: Routes = [
     FooterComponent,
     LifecycleExampleComponent,
     AboutMeComponent,
+    ViewEncapsulationComponent,
   ],
   imports: [
     BrowserModule,

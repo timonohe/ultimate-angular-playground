@@ -1,0 +1,62 @@
+<h1>View encapsulation</h1>
+
+<p>
+  To prevent overriding global styles or other components design Angular encapsulates
+  the styling of each component. There are 3 encapsulation modes that can be selected.
+</p>
+
+<div class="encapsulation-mode-cards">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ViewEncapsulation.ShadowDom</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Uses the browser build-in shadow-dom</li>
+        <li>Encloses the component into a ShadowRoot</li>
+        <li>
+          Components content projected into that ShadowRoot, so the applied styling
+          does not affect other components
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ViewEncapsulation.Emulated</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Emulates the shadow dom api</li>
+        <li>Modifies each css selector in that component and append the styling on it</li>
+        <li>Because of that the styling would also not affect other components</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>ViewEncapsulation.None</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Does not apply any view encapsulation</li>
+        <li>Styling affects the global app like it would be defined in a global stylesheet</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<h2>Generated CSS in emulated mode</h2>
+
+<p>
+  In emulated mode Angular pre-processes every element in a component and simulates the behaviour of the shadow dom.
+  The root element gets an attribute called <strong>_nghost</strong> and each child-element gets the
+  attribute <strong>_ngcontent</strong>. The styling for those pre-processed elements will be expanded with a post-processed
+  styling-selectors in their stylesheet: <strong>selector[_nghost]</strong> and <strong>selector[_ngcontent]</strong>.
+</p>
+
+<h2>Mixing encapsulation modes</h2>
+
+<p class="warning">
+  It is not recommended to mix these modes wildly together. If needed be aware of the consequences!
+</p>

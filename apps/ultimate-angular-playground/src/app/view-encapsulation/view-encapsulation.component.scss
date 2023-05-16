@@ -1,0 +1,11 @@
+.encapsulation-mode-cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  margin: 20px 0;
+
+  mat-card {
+    grid-column: span 4;
+    color: #000;
+  }
+}
