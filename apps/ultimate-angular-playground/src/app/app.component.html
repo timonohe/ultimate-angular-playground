@@ -1,5 +1,27 @@
-<ultimate-angular-playground-header></ultimate-angular-playground-header>
-<div id="app-content">
-  <router-outlet></router-outlet>
-</div>
-<ultimate-angular-playground-footer></ultimate-angular-playground-footer>
+<mat-drawer-container>
+  <mat-drawer class="sidenav-menu" #drawer mode="over">
+    <a [routerLink]="['angular-lifecycle']" routerLinkActive="active" (click)="drawer.close()">Angular-Lifecycles</a>
+    <a [routerLink]="['view-encapsulation']" routerLinkActive="active" (click)="drawer.close()">View-Encapsulation</a>
+    <a [routerLink]="['component-interaction']" routerLinkActive="active" (click)="drawer.close()">Component-Interaction</a>
+    <a class="small-item" [routerLink]="['about']" routerLinkActive="active" (click)="drawer.close()">About me</a>
+  </mat-drawer>
+  <div class="sidenav-content">
+    <div class="header">
+      <span id="title">
+          <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        <img src="../assets/logos/angular.png" alt="The Angular Logo">
+        <span class="home-link" [routerLink]="['']">ANGULAR PLAYGROUND</span>
+      </span>
+
+      <span>Created with Angular 16</span>
+    </div>
+
+    <div id="app-content">
+      <router-outlet></router-outlet>
+    </div>
+
+    <ultimate-angular-playground-footer></ultimate-angular-playground-footer>
+  </div>
+</mat-drawer-container>

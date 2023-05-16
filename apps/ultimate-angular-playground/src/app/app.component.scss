@@ -5,9 +5,80 @@
   min-height: 100vh;
 }
 
-#app-content {
-  color: #fff;
+.sidenav-menu {
+  padding: 20px 40px 20px 20px;
   background-color: #303030;
-  flex: 1;
-  padding: 16px;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 21px;
+
+    &.small-item {
+      font-size: 16px;
+    }
+
+    &.active {
+      color: #7fc9ff;
+    }
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+}
+
+.sidenav-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d47a1;
+    color: #fff;
+    padding: 16px;
+
+    #title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+
+      button {
+        margin-right: 10px;
+      }
+
+      img {
+        width: 25px;
+        margin-right: 10px;
+      }
+
+      .home-link {
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 10px;
+        display: block;
+      }
+    }
+
+  }
+
+  #app-content {
+    color: #fff;
+    background-color: #303030;
+    flex: 1;
+    padding: 16px;
+  }
+
 }
