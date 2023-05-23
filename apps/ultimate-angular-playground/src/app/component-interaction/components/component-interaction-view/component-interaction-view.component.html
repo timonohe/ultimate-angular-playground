@@ -1,0 +1,29 @@
+<h1>Component interaction</h1>
+
+<div class="content-grid">
+  <div class="navigation">
+    <a [routerLink]="['pass-data-from-parent-to-child']">
+      <mat-icon>school</mat-icon>
+      Pass data from parent to child
+    </a>
+    <a [routerLink]="['intercept-property-changes-with-setter']">
+      <mat-icon>school</mat-icon>
+      Intercept property changes with setter
+    </a>
+    <a [routerLink]="['intercept-property-changes-with-ng-on-changes']">
+      <mat-icon>school</mat-icon>
+      Intercept property changes with OnChanges Lifecycle Hook
+    </a>
+    <a [routerLink]="['output-event']">
+      <mat-icon>school</mat-icon>
+      Parent listens for child event
+    </a>
+    <a [routerLink]="['reference-by-local-variable']">
+      <mat-icon>school</mat-icon>
+      Reference by local variable
+    </a>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

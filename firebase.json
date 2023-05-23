@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/apps",
+    "public": "dist/apps/ultimate-angular-playground",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -1,0 +1,16 @@
+<p>
+  Setting an input value from a child component can be intercepted with a setter method.
+</p>
+<p>
+  The input attribute should be defined as an getter and with an additional setter method
+  named after the input attribute it will be intercepted, if set from the parent component.
+</p>
+
+<h2>Master controls {{names.length}} names</h2>
+
+<ultimate-angular-playground-name-child
+  *ngFor="let name of names"
+  [name]="name"
+/>
+
+Names from Parent to Child: {{names | json}}

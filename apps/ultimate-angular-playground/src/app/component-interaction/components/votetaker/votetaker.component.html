@@ -1,0 +1,13 @@
+<p>
+  To respond to changes in the child component, the parent component can listen
+  for its event emitter.
+</p>
+
+<h2>Should mankind colonize the Universe?</h2>
+<h3>Agree: {{agreed}}, Disagree: {{disagreed}}</h3>
+
+<ultimate-angular-playground-voter
+  *ngFor="let voter of voters"
+  [name]="voter"
+  (voted)="onVoted($event)"
+/>

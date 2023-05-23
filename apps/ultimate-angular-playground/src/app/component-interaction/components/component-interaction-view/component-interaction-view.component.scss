@@ -1,0 +1,36 @@
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 40px;
+
+  .navigation {
+    a {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+      margin-top: 10px;
+
+      mat-icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media(max-width: 1044px) {
+  .navigation, .content {
+    grid-column: span 12;
+  }
+}
+
+@media(min-width: 1045px) {
+  .navigation {
+    grid-column: span 5;
+  }
+
+  .content {
+    grid-column: span 7;
+  }
+}

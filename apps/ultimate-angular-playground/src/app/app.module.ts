@@ -9,17 +9,19 @@ import { MatCardModule } from '@angular/material/card';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewEncapsulationComponent } from './view-encapsulation/view-encapsulation.component';
-import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatIconModule } from "@angular/material/icon";
-import { MatButtonModule } from "@angular/material/button";
-import { AngularFireModule } from "@angular/fire/compat";
-import { environment } from "../environments/environment";
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [
   { path: 'angular-lifecycle', component: LifecycleExampleComponent },
   { path: 'view-encapsulation', component: ViewEncapsulationComponent },
-  { path: 'component-interaction', component: ComponentInteractionComponent },
+  {
+    path: 'component-interaction',
+    loadChildren: () => import('./component-interaction/component-interaction.module').then(m => m.ComponentInteractionModule)
+  },
   { path: 'about', component: AboutMeComponent },
   { path: '', redirectTo: 'angular-lifecycle', pathMatch: 'full' },
 ];
@@ -32,7 +34,6 @@ const routes: Routes = [
     LifecycleExampleComponent,
     AboutMeComponent,
     ViewEncapsulationComponent,
-    ComponentInteractionComponent,
   ],
   imports: [
     BrowserModule,

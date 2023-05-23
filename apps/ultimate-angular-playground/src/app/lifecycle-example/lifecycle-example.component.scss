@@ -1,3 +1,21 @@
+@media(max-width: 620px) {
+  mat-card {
+    grid-column: span 12;
+  }
+}
+
+@media(min-width: 621px) {
+  mat-card {
+    grid-column: span 6;
+  }
+}
+
+@media(min-width: 900px) {
+  mat-card {
+    grid-column: span 3;
+  }
+}
+
 .lifecycle-cards {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -5,7 +23,6 @@
   margin: 20px 0;
 
   mat-card {
-    grid-column: span 3;
     color: #000;
   }
 }

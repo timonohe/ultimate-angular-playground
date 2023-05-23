@@ -1,0 +1,14 @@
+<p>
+  Will some input attribute change that is passed from parent to child, the child component
+  could react upon that change with the help of the OnChanges Lifecycle Hook.
+</p>
+
+<h2>Source code version</h2>
+
+<button mat-flat-button (click)="newMinor()">New minor version</button>
+<button mat-flat-button type="button" (click)="newMajor()">New major version</button>
+
+<ultimate-angular-playground-version-child
+  [major]="major"
+  [minor]="minor"
+/>

@@ -1,3 +1,14 @@
+@media(max-width: 1029px) {
+  mat-card {
+    grid-column: span 12;
+  }
+}
+@media(min-width: 1030px) {
+  mat-card {
+    grid-column: span 4;
+  }
+}
+
 .encapsulation-mode-cards {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -5,7 +16,6 @@
   margin: 20px 0;
 
   mat-card {
-    grid-column: span 4;
     color: #000;
   }
 }

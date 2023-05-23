@@ -1,0 +1,13 @@
+button:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.seconds {
+  display: table;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+  color: #ff0000;
+  background-color: #000;
+}

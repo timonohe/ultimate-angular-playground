@@ -1,0 +1,13 @@
+<p>
+  The parent component cannot normally access the attributes and methods of the
+  child component. By referencing the child component, the parent component can
+  certainly access the corresponding attributes and methods. The reference is
+  established with a hash and a meaningful name on the child component.
+</p>
+
+<h3>Countdown to Liftoff (via local variable)</h3>
+<button mat-flat-button (click)="timer.start()">Start</button>
+<button mat-flat-button (click)="timer.stop()">Stop</button>
+<div class="seconds">{{timer.seconds}}</div>
+
+<ultimate-angular-playground-countdown-timer #timer />
