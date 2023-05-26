@@ -6,6 +6,8 @@ import { HeroParentComponent } from './components/hero-parent/hero-parent.compon
 import { VersionParentComponent } from './components/version-parent/version-parent.component';
 import { NameParentComponent } from './components/name-parent/name-parent.component';
 import { CountdownParentComponent } from './components/countdown-parent/countdown-parent.component';
+import { CountdownParentViewchildComponent } from './components/countdown-parent-viewchild/countdown-parent-viewchild.component';
+import { MissioncontrolComponent } from './components/missioncontrol/missioncontrol.component';
 
 const routes: Routes = [
   {
@@ -29,12 +31,20 @@ const routes: Routes = [
         path: 'reference-by-local-variable',
         component: CountdownParentComponent,
       },
+      {
+        path: 'parent-calls-viewchild',
+        component: CountdownParentViewchildComponent,
+      },
+      {
+        path: 'using-a-service',
+        component: MissioncontrolComponent,
+      },
     ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ComponentInteractionRoutingModule { }
+export class ComponentInteractionRoutingModule {}

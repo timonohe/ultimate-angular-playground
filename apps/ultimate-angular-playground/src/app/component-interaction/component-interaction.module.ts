@@ -15,6 +15,9 @@ import { VoterComponent } from './components/voter/voter.component';
 import { VotetakerComponent } from './components/votetaker/votetaker.component';
 import { CountdownTimerComponent } from './components/countdown-timer/countdown-timer.component';
 import { CountdownParentComponent } from './components/countdown-parent/countdown-parent.component';
+import { CountdownParentViewchildComponent } from './components/countdown-parent-viewchild/countdown-parent-viewchild.component';
+import { MissioncontrolComponent } from './components/missioncontrol/missioncontrol.component';
+import { AstronautComponent } from './components/astronaut/astronaut.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { CountdownParentComponent } from './components/countdown-parent/countdow
     VotetakerComponent,
     CountdownTimerComponent,
     CountdownParentComponent,
+    CountdownParentViewchildComponent,
+    MissioncontrolComponent,
+    AstronautComponent,
   ],
   imports: [
     CommonModule,

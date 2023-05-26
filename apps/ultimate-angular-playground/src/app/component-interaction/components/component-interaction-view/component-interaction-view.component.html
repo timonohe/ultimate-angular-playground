@@ -22,6 +22,14 @@
       <mat-icon>school</mat-icon>
       Reference by local variable
     </a>
+    <a [routerLink]="['parent-calls-viewchild']">
+      <mat-icon>school</mat-icon>
+      Parent calls Viewchild
+    </a>
+    <a [routerLink]="['using-a-service']">
+      <mat-icon>school</mat-icon>
+      Using a service
+    </a>
   </div>
   <div class="content">
     <router-outlet></router-outlet>

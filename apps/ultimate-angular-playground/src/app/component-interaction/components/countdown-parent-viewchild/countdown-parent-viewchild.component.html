@@ -1,0 +1,12 @@
+<p>
+  If the parent component class has to access the child component's class,
+  the local variable will not help. Angular offers the ViewChild Decorator which
+  can be linked to an attribute, that is a reference to another component.
+</p>
+
+<h3>Countdown to Liftoff (via ViewChild)</h3>
+<button mat-flat-button type="button" (click)="start()">Start</button>
+<button mat-flat-button type="button" (click)="stop()">Stop</button>
+<div class="seconds">{{ seconds() }}</div>
+
+<ultimate-angular-playground-countdown-timer />
