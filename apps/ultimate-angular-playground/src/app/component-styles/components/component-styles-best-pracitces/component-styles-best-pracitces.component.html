@@ -1,0 +1,47 @@
+<p>
+  The styles belong to the private implementation of the component. It is
+  therefore not advisable to change internal structures via CSS. Angular
+  prevents this intervention by default via view encapsulation. Global styles
+  are nevertheless applied across all components.
+</p>
+
+<div class="card">
+  <div class="header">CSS Custom Properties (recommended)</div>
+  <div class="content">
+    Using CSS variables, components allow embedding elements to override
+    specific styles. The component itself defines variables such as the color of
+    the heading. The parent component then overrides this variable with a
+    different color value if the default case is not sufficient.
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">Declare global CSS with <strong>@mixins</strong></div>
+  <div class="content">
+    Angular denies any overrides of internal CSS structures through view
+    encapsulation. By defining <strong>@mixins</strong> in the global CSS file,
+    developers can define different states of the component such as a "Dark" or
+    "Light" theme. The respective components can then define themselves how
+    they should look in the respective <strong>@mixins</strong>.
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">Using ::part as pseudo-element</div>
+  <div class="content">
+    The ::part element describes a normal HTML element with a part attribute.
+    This can contain either one or more labels as value. These are also present
+    in the shadow DOM. For this reason, a parent component can redesign parts of
+    the child component using the ::part selector.
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">Provide a TypeScript API (not recommended)</div>
+  <div class="content">
+    Component developers can define a TypeScript API that allows other
+    developers to dynamically modify the styles of a component. However, this
+    is not recommended because the additional (regular) execution of the
+    JavaScript blocks can lead to performance issues.
+  </div>
+</div>

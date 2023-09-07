@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'component-interaction',
     loadChildren: () => import('./component-interaction/component-interaction.module').then(m => m.ComponentInteractionModule)
   },
+  {
+    path: 'component-styles',
+    loadChildren: () => import('./component-styles/component-styles.module').then(m => m.ComponentStylesModule)
+  },
   { path: 'about', component: AboutMeComponent },
   { path: '', redirectTo: 'angular-lifecycle', pathMatch: 'full' },
 ];

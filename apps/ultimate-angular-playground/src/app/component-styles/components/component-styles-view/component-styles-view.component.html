@@ -1,0 +1,20 @@
+<h1>Component styles</h1>
+
+<div class="content-grid">
+  <div class="navigation">
+    <p>
+      In Angular, styles can be applied to different components without overwriting
+      styles from other components. All known CSS features can be used for this purpose.
+    </p>
+
+    <a [routerLink]="['best-practices']">
+      <mat-icon>school</mat-icon> Best practices
+    </a>
+    <a [routerLink]="['special-selectors']">
+      <mat-icon>school</mat-icon> Special selectors
+    </a>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
