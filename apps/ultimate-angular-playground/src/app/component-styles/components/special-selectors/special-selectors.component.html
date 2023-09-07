@@ -1,6 +1,27 @@
 <div class="card">
   <div class="header">:host</div>
   <div class="content">
-    Every component can be embedded with their corresponding element-selector.
+    Every component can be embedded with their corresponding element-selector. The embedded element is also known
+    as <strong>host-element</strong>. The selector for that element is <strong>:host</strong>. All styles will be
+    applied to the host-element itself and to all of its descendants.
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">:host-context</div>
+  <div class="content">
+    If the style on the host-element should conditionally applied that depends on an ancestor of that element,
+    a combination with the so called <strong>:host-context</strong> selector and a condition within the function brackets.
+
+    <div><code>:host-context(.active)</code></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">/deep/, >>>, and ::ng-deep <strong class="deprecated">(DEPRECATED)</strong></div>
+  <div class="content">
+    The <strong>ng-deep-selector</strong> disables the View-Encapsulation from Angular in that specific block.
+    Without putting a host-selector in front of this selector all styles within that block will be handled as global
+    styles.
   </div>
 </div>

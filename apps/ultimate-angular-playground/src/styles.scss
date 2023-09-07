@@ -13,6 +13,10 @@ body {
   color: #ff9300
 }
 
+.deprecated {
+  color: #ad0000
+}
+
 .content-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
