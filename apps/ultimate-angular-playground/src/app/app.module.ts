@@ -24,6 +24,10 @@ const routes: Routes = [
     path: 'component-styles',
     loadChildren: () => import('./component-styles/component-styles.module').then(m => m.ComponentStylesModule)
   },
+  {
+    path: 'directives-and-components-communication',
+    loadChildren: () => import('./directives-and-component-communication/directives-and-component-communication.module').then(m => m.DirectivesAndComponentCommunicationModule)
+  },
   { path: '', redirectTo: 'angular-lifecycle', pathMatch: 'full' },
 ];
 

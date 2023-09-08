@@ -1,0 +1,57 @@
+<div class="card">
+  <div class="header">Styles in the component metadata</div>
+  <div class="content">
+    Components can have multiple style declarations within the respective decorator. The value from this attribute
+    is a string array. Each entry defines exclusive CSS for that component.
+
+    <code>styles: ['h1 &#10100; font-weight: normal; &#10101;']</code>
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">Style-Files in the component metadata</div>
+  <div class="content">
+    If CSS for a specific component is defined in an external file, it can be referenced within the component decorator
+    with the styleUrls-Attribute. It contains a string array with (possible) multiple CSS-Files.
+
+    <code>styleUrls: ['./hero-app.component.css']</code>
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">Template inline styles</div>
+  <div class="content">
+    Styles could also be applied within the styles tag in the components template.
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">Template link tags</div>
+  <div class="content">
+    Link-Tags can be used within the components template to load external CSS-Files. This external files should be
+    considered during the build-stage.
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">CSS @imports</div>
+  <div class="content">
+    CSS-Files can be imported into other css files with the @import statement and a relative path to that file.
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">External and global style files</div>
+  <div class="content">
+    External CSS-Files have to be included while building the angular application. To achieve this, there is a section
+    "styles" in the angular.json file, where the styles.css is already entered by default. Other files can be added here.
+  </div>
+</div>
+
+<div class="card">
+  <div class="header">Non-CSS style files</div>
+  <div class="content">
+    External CSS-Files have to be included while building the angular application. To achieve this, there is a section
+    "styles" in the angular.json file, where the styles.css is already entered by default. Other files can be added here.
+  </div>
+</div>
